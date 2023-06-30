@@ -16,6 +16,10 @@
     <div class="button-container">
       <button @click="moveTotask()">Task2</button>
     </div>
+    <div class="button-container">
+      <button @click="moveToAxios()">Task3</button>
+    </div>
+
   </div>
 </template>
 
@@ -45,6 +49,9 @@ export default{
   },
   moveTotask() {
     this.$router.push("/taskdisplay");
+  },
+  moveToAxios(){
+    this.$router.push("/taskaxios")
   }
 }
 

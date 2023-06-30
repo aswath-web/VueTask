@@ -3,7 +3,9 @@ import Table from '../views/Table.vue'
 import Text from '../views/Text.vue'
 import Textcomp from '../views/Textcomp.vue'
 import Tablevalue from '../views/Tablevalue.vue'
-import forms from '../components/forms.vue'
+import Axios from '../views/Axios.vue'
+
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -23,9 +25,9 @@ const router = createRouter({
       component: Textcomp
     },
     {
-      path: '/task2',
-      name: 'task2',
-      component: forms
+      path: '/taskaxios',
+      name: 'taskaxios',
+      component: Axios
     },
     {
       path: '/taskdisplay',
