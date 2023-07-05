@@ -4,6 +4,10 @@ import Text from '../views/Text.vue'
 import Textcomp from '../views/Textcomp.vue'
 import Tablevalue from '../views/Tablevalue.vue'
 import Axios from '../views/Axios.vue'
+import employee from '../views/employee.vue'
+import Login from '../views/Login.vue'
+
+import App from '../App.vue'
 
 
 const router = createRouter({
@@ -12,7 +16,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'text',
-      component: Text
+      component:Login
       },
     {
     path: '/table',
@@ -33,6 +37,11 @@ const router = createRouter({
       path: '/taskdisplay',
       name: 'taskdisplay',
       component: Tablevalue
+    },
+    {
+      path: '/employee',
+      name: 'employee',
+      component: employee
     },
   
   

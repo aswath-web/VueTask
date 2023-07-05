@@ -3,12 +3,12 @@
     <form @submit="handleSubmit">
       <div>
         <label for="employeeId">Employee ID</label>
-        <input type="text" id="employeeId" v-model="employeeId" required>
+        <input type="text" id="employeeId" v-model="formData.emp_id" required>
       </div>
       
       <div>
         <label for="employeeName">Employee Name</label>
-        <input type="text" id="employeeName" v-model="employeeName" required>
+        <input type="text" id="employeeName" v-model="formData.emp_name" required>
       </div>
       
       <button type="submit">Submit</button>
@@ -23,23 +23,21 @@ export default {
   name: 'FormComponent',
   data() {
     return {
-      employeeId: '',
-      employeeName: ''
+      formData: {
+        emp_id: '',
+        emp_name: ''
+      }
     };
   },
   methods: {
     handleSubmit(event) {
       event.preventDefault();
       
-      const formData = {
-        emp_id: this.employeeId,
-        emp_name: this.employeeName
-      
+      this.$emit('details', this.formData);
+      this.formData = {
+        emp_id: '',
+        emp_name: ''
       };
-      
-      this.$emit('details',formData)
-      this.employeeId = '';
-      this.employeeName = '';
     }
   }
 };
